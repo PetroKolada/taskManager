@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task manager</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <span class="header_holder">
+                <button class="header__button" id="addButton">+</button>
+                Добавить задачу
+            </span>
+        </header>
+        <div class="main_hero">
+            <div class="task_list" id="list">
+            </div>
+        </div>
+    </div>
+
+    <div class="add_window">
+        <span>Меню создания задачи</span>
+        <form action="" class="window">
+            <input type="name" placeholder="Имя исполнителя" id="taskAuthor">
+            <input type="text" placeholder="Сама задача" id="taskName">
+            <input type="button" value="Создать" id="taskButton">
+        </form>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
