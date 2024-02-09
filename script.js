@@ -8,6 +8,20 @@ const deleteWindow = document.querySelector("#deleteWindow")
 let taskList = []
 
 
+function addTask(event) {
+    let item = document.createElement("div")
+    item.innerHTML +=
+        `<div class="task_item">` +
+        `<span>` + `<img src="icons/avatar.png" alt="" sizes="20px 20px" class="icon">` + taskAuthor.value + `</span>` +
+        `<span>` + taskName.value + `</span>` +
+        `<div><button class="delete__button" id="deleteButton"><img src="icons/delete.png" alt="" sizes="20px 20px" class="icon"></button></div>` +
+        `</div>`
+
+    taskAuthor.value = ""
+    taskName.value = ""
+}
+
+
 addButton.addEventListener("click", function (event) {
 
     let taskButton = document.querySelector("#taskButton")
@@ -16,29 +30,25 @@ addButton.addEventListener("click", function (event) {
 
     addWindow.style.pointerEvents = "all"
     addWindow.style.opacity = 1
+
+    taskName.addEventListener("keydown", function(event){
+        taskButton.click()
+    })
 })
 
 
 
-taskButton.addEventListener("click", function () {
-    if (taskName.value != "") {
-        let item = document.createElement("div")
-        item.innerHTML +=
-            `<div class="task_item">` +
-            `<span>` + `<img src="icons/avatar.png" alt="" sizes="20px 20px" class="icon">` + taskAuthor.value + `</span>` +
-            `<span>` + taskName.value + `</span>` +
-            `<div><button class="delete__button" id="deleteButton"><img src="icons/delete.png" alt="" sizes="20px 20px" class="icon"></button></div>` +
-            `</div>`
 
-        taskAuthor.value = ""
-        taskName.value = ""
+taskButton.addEventListener("click", function (event) {
+    if (taskName.value != "") {
+        addTask(event)
 
         item.querySelector("#deleteButton").addEventListener("click", function () {
             deleteWindow.style.opacity = 1
             deleteWindow.style.pointerEvents = "all"
 
             deleteWindow.querySelector("#confirmDelete").addEventListener("click", function () {
-                item.lastElementChild.remove()
+                item.remove()
                 taskList.splice(taskList.indexOf(item), 1)
                 deleteWindow.style.opacity = 0
                 deleteWindow.style.pointerEvents = "none"
