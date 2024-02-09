@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +9,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 </head>
-
 <body>
     <div class="wrapper">
         <header class="header">
@@ -25,7 +23,7 @@
         </div>
     </div>
 
-    <div class="add_window" id="addWindow">
+    <div class="add_window">
         <span>Меню создания задачи</span>
         <form action="" class="window">
             <input type="name" placeholder="Имя исполнителя" id="taskAuthor">
@@ -34,23 +32,7 @@
         </form>
     </div>
 
-    <div class="add_window" id="deleteWindow">
-        <div class="window_header">
-            <span>Подтвердите удаление</span>
-            <button class="header__button" id="cancelDeleteSec">×</button>
-        </div>
-        <form action="" class="window">
-            <span>· Вы уверены, что хотите удалить эти планы?</span>
-            <div class="delete_buttons">
-                <input type="button" class="window__button" id="confirmDelete" value="Удалить"></input>
-                <input type="button" class="window__button" id="cancelDelete" value="Отмена"></input>
-            </div>
-        </form>
-    </div>
-
-
 
     <script src="script.js"></script>
 </body>
-
 </html>

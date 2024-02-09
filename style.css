@@ -1,17 +1,18 @@
-* {
+*{
     font-family: 'Montserrat', sans-serif;
     box-sizing: border-box;
 }
 
 html,
-body {
+body
+{
     margin: 0px;
     padding: 0px;
     height: 100%;
     color: aliceblue;
 }
 
-.wrapper {
+.wrapper{
     height: 100%;
     display: table;
     width: 100%;
@@ -19,7 +20,7 @@ body {
     overflow: hidden;
 }
 
-.header {
+.header{
     background-color: rgb(51, 51, 71);
     padding: 10px;
     align-items: center;
@@ -27,7 +28,7 @@ body {
     padding-left: 35px;
 }
 
-.header__button {
+.header__button{
     border: none;
     border-radius: 50%;
     height: 35px;
@@ -37,17 +38,17 @@ body {
     background-color: white;
 }
 
-.header__button:hover {
+.header__button:hover{
     background-color: rgb(124, 148, 168);
     cursor: pointer;
 }
 
-#taskButton {
+#taskButton{
     transition: 0.1s;
     background-color: white;
 }
 
-#taskButton:hover {
+#taskButton:hover{
     background-color: rgb(124, 148, 168);
     cursor: pointer;
 }
@@ -59,22 +60,22 @@ body {
     gap: 10px;
 }
 
-.main_hero {
+.main_hero{
     display: block;
     height: 100%;
 }
 
-.add_window {
+.add_window{
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 25px;
-    min-width: 500px;
+    width: 500px;
+    height: 500px;
     background-color: rgba(51, 50, 54, 0.5);
     position: fixed;
     top: 25%;
     left: 50%;
-    transform: translate(-50%, 0);
+    transform: translate(-50%,0);
     transition: 1s;
     padding: 10px;
     justify-content: space-around;
@@ -85,16 +86,15 @@ body {
     transition: 0.2s;
 }
 
-.window {
+.window{
     height: 50%;
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    gap: 10px;
 }
 
-.window>* {
+.window > * {
     padding: 10px;
     border: none;
     border-radius: 25px;
@@ -122,23 +122,23 @@ body {
     overflow: hidden;
 }
 
-.task_item:hover {
+.task_item:hover{
     box-shadow: 0 4px 8px -2px rgba(96, 96, 96, 0.726), 0 0 1px 0 rgba(96, 96, 96, 0.651);
 }
 
-.task_item:hover .delete__button {
+.task_item:hover .delete__button{
     right: 0px;
     display: inline;
 }
 
-.task_item>span:first-child {
+.task_item > span:first-child {
     font-size: 25px;
     display: flex;
     align-items: center;
     padding-bottom: 8px;
 }
 
-.task_item>span {
+.task_item > span{
     text-wrap: balance;
     word-wrap: break-word;
 }
@@ -148,7 +148,7 @@ body {
     width: 25px;
 }
 
-.delete__button {
+.delete__button{
     border: none;
     background-color: #c9101054;
     position: absolute;
@@ -159,7 +159,7 @@ body {
     cursor: pointer;
 }
 
-.delete__button:hover {
+.delete__button:hover{
     background-color: #e0121254;
 }
 
@@ -169,33 +169,5 @@ body {
     background-color: rgba(24, 19, 27, 0.733);
 }
 
-.window__button {
-    border: none;
-    padding: 10px;
-    border-radius: 5px;
-}
 
-.delete_buttons {
-    display: flex;
-    gap: 5px;
-    justify-content: flex-end;
-}
 
-.window_header {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-}
-
-.window__button {
-    transition: all 0.2s;
-}
-
-.window__button:hover {
-    background-color: rgb(124, 148, 168);
-    cursor: pointer;
-}
-
-.window>span:first-child {
-    font-size: 15px;
-}
